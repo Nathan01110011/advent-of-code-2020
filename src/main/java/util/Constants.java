@@ -31,4 +31,17 @@ public class Constants {
     public static int MIN_EXPIRY_YEAR = 2020;
     public static int MAX_EXPIRY_YEAR = 2030;
 
+    // Day Five
+    public static String DAY_FIVE_FILE_PATH = RESOURCE_PATH + "input5.txt";
+    public static int ROW_MIN = 0;
+    public static int ROW_MAX = 127;
+    public static int ROW_END_CHAR = 6;
+    public static int COL_MIN = 0;
+    public static int COL_MAX = 7;
+    public static int COL_END_CHAR = 9;
+    public static char LOW_CHAR_ROW = 'F';
+    public static char HIGH_CHAR_ROW = 'B';
+    public static char LOW_CHAR_COL = 'L';
+    public static char HIGH_CHAR_COL = 'R';
+
 }
