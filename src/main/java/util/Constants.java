@@ -44,4 +44,7 @@ public class Constants {
     public static char LOW_CHAR_COL = 'L';
     public static char HIGH_CHAR_COL = 'R';
 
+    // Day Six
+    public static String DAY_SIX_FILE_PATH = RESOURCE_PATH + "input6.txt";
+    public static String ALPHABET = "abcdefghijklmnopqrstuvwxyz";
 }
