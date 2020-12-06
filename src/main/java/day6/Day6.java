@@ -20,10 +20,10 @@ public class Day6 {
 
     private static int getNumberOfAnswersAtLeastOneUserRespondedYes(String[] answerGroups) {
         int counter = 0;
-        for (String x: answerGroups) {
-            x = x.replace("\n", "").replace("\r", "");
+        for (String personAnswers: answerGroups) {
+            personAnswers = personAnswers.replace("\n", "").replace("\r", "");
             StringBuilder sb = new StringBuilder();
-            x.chars().distinct().forEach(c -> sb.append((char) c));
+            personAnswers.chars().distinct().forEach(c -> sb.append((char) c));
             counter += sb.length();
         }
         return counter;
@@ -31,12 +31,12 @@ public class Day6 {
 
     private static int getNumberOfAnswersThatAllUsersRespondedAllYes(String[] answerGroups) {
         int counter = 0;
-        for (String x: answerGroups) {
+        for (String personAnswers: answerGroups) {
             List<Character> allAnswered = new ArrayList<>();
-            int groupSize = x.split("\n").length;
-            x = x.replace("\n", "").replace("\r", "");
+            int groupSize = personAnswers.split("\n").length;
+            personAnswers = personAnswers.replace("\n", "").replace("\r", "");
             for (char letter: ALPHABET.toCharArray()) {
-                int numberOfAnswersForThatQuestion = x.length() - x.replace(String.valueOf(letter), "").length();
+                int numberOfAnswersForThatQuestion = personAnswers.length() - personAnswers.replace(String.valueOf(letter), "").length();
                 if (numberOfAnswersForThatQuestion == groupSize) {
                     allAnswered.add(letter);
                 }
